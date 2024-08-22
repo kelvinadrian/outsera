@@ -43,7 +43,7 @@ public class DBLoaderRunner implements CommandLineRunner {
                     .map(this::mapToFilme)
                     .collect(Collectors.toList());
         } catch (IOException e) {
-            String errorMessage = "Erro ao ler o arquivo CSV: " + CSV_FILE;
+            String errorMessage = "Erro ao ler o arquivo CSV";
             System.err.println(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
